@@ -1,0 +1,201 @@
+.main_box {
+	@extend %max_wight;
+	padding-top: 50px;
+	padding-bottom: 60px;
+	> h2 {
+		@extend %tex_shadow;
+		margin-bottom: 15px;
+		display: block;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	> span {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 30px;
+		max-width: 200px;
+		padding: 0;
+		user-select: none;
+		&::before,
+		&::after {
+			display: block;
+			content: "";
+			width: 40%;
+			height: 1px;
+			background-color: $color_text;
+		}
+	}
+}
+.box-foo {
+	margin-top: 20px;
+	padding: 10px 20px;
+	text-align: center;
+	background: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 0.08) 20%,
+		rgba(255, 255, 255, 0.08) 80%,
+		rgba(255, 255, 255, 0) 100%
+	);
+}
+.vragi {
+	background-color: rgba(0, 0, 0, 0.16);
+	padding-bottom: 30px;
+}
+.keisi {
+	background-color: rgba(0, 0, 0, 0.16);
+	padding-top: 30px;
+}
+.otziv {
+	.main_con {
+		display: grid;
+		grid-template:
+			"ava_1 ava_2 car_o" 1fr
+			"ava_3 ava_4 car_o" 1fr / 1fr 1fr 40.9%;
+		gap: 20px;
+	}
+	div[class^="ava_"] {
+		overflow: hidden;
+		height: 0;
+		padding-top: 100%;
+		position: relative;
+		background-color: #fff;
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			object-fit: cover;
+			object-position: 50% 50%;
+		}
+	}
+	.ava_1 {
+		grid-area: ava_1;
+	}
+	.ava_2 {
+		grid-area: ava_2;
+	}
+	.ava_3 {
+		grid-area: ava_3;
+	}
+	.ava_4 {
+		grid-area: ava_4;
+	}
+	.car_o {
+		grid-area: car_o;
+		overflow: hidden;
+		height: 0;
+		padding-top: 140%;
+		position: relative;
+	}
+}
+.owl-otzivi {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+@media (max-width: 719.98px) {
+	.keisi {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.otziv {
+		.main_con {
+			grid-template:
+				"ava_1 ava_2" 1fr
+				"ava_3 ava_4" 1fr
+				"car_o car_o" 140% / 1fr 1fr;
+			gap: 10px;
+		}
+	}
+}
+// Телефон и Ватсапп
+.bo-telephone {
+	bottom: 15px;
+	background: #0a82c7 var(--tel) 50% 50% no-repeat;
+	animation: botel 7s ease-in-out infinite;
+}
+.bo-whatsapp {
+	bottom: 70px;
+	background: #2ac44d var(--whatsapp) 50% 50% no-repeat;
+	animation: bowha 7s ease-in-out infinite;
+}
+a.bo-whatsapp,
+a.bo-telephone {
+	display: block;
+	position: fixed;
+	overflow: hidden;
+	right: 10px;
+	width: 40px;
+	height: 0;
+	padding-top: 40px;
+	border-radius: 50%;
+	z-index: 100;
+	background-size: 20px 20px;
+	transition: transform 0.3s ease;
+	box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.4);
+	&:hover {
+		transform: scale(1.2);
+	}
+}
+@keyframes bowha {
+	25.75% {
+		margin-right: 0;
+	}
+	26% {
+		margin-right: -2px;
+	}
+	26.5% {
+		margin-right: 2px;
+	}
+	27% {
+		margin-right: -2px;
+	}
+	27.5% {
+		margin-right: 2px;
+	}
+	28% {
+		margin-right: -2px;
+	}
+	28.5% {
+		margin-right: 2px;
+	}
+	28.75% {
+		margin-right: 0;
+	}
+}
+@keyframes botel {
+	28.75% {
+		margin-right: 0;
+	}
+	29% {
+		margin-right: -2px;
+	}
+	29.5% {
+		margin-right: 2px;
+	}
+	30% {
+		margin-right: -2px;
+	}
+	30.5% {
+		margin-right: 2px;
+	}
+	31% {
+		margin-right: -2px;
+	}
+	31.5% {
+		margin-right: 2px;
+	}
+	31.75% {
+		margin-right: 0;
+	}
+}
+.obsod {
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.16);
+}

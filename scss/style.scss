@@ -1,0 +1,29 @@
+$color_text: #d1d1be;
+$color_link: #182858;
+$color_fon: #1c2025;
+$color_beige: #c29974;
+
+@import "icons";
+@import "root";
+
+%max_wight {
+	padding: 0 5%;
+	> * {
+		width: 100%;
+		max-width: 1060px;
+		margin: 0 auto;
+	}
+}
+%tex_shadow {
+	text-shadow: 0 0 0.2em rgba(28, 32, 37, 0.8), 1px 1px 0 rgba(28, 32, 37, 0.5);
+}
+
+@import "header";
+@import "pop";
+@import "main";
+@import "modal";
+@import "owl-core";
+@import "owl-otzivi";
+@import "owl-vragi";
+@import "owl-keisi";
+@import "footer";

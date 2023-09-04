@@ -1,0 +1,77 @@
+// Карусель поверженных врагов
+.owl-vragi {
+	.item {
+		background-color: #fff;
+		height: 100%;
+		padding: 10px;
+		cursor: pointer;
+	}
+}
+.owl-dots {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 15px;
+	button.owl-dot {
+		display: block;
+		width: 14px;
+		height: 14px;
+		border: 2px solid $color_beige;
+		background-color: transparent;
+		outline: 0;
+		border-radius: 50%;
+		margin: 4px;
+		opacity: 0.4;
+		transition: opacity, background-color 0.3s ease;
+		&.active {
+			background-color: $color_beige;
+			opacity: 1;
+		}
+	}
+}
+.vr-img {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	padding-top: 100%;
+	img {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		object-position: 50% 50%;
+	}
+}
+.vr-text {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid $color_beige;
+	padding: 5px;
+	> div {
+		text-align: center;
+	}
+	span {
+		width: 100%;
+		color: $color_link;
+		line-height: 1.1;
+		text-align: center;
+		word-wrap: break-word;
+		border-bottom: 1px dashed $color_link;
+		padding-bottom: -5px;
+	}
+}
+.owl-vragi {
+	.item {
+		&:hover {
+			span {
+				border-bottom: 0;
+			}
+		}
+	}
+}

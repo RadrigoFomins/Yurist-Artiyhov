@@ -1,0 +1,63 @@
+// Карусель отзывов
+.owl-otzivi {
+	background-color: #fff;
+	.item {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		a {
+			display: block;
+			overflow: hidden;
+			width: 100%;
+			height: 0;
+			padding-top: 140%;
+		}
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			object-fit: cover;
+			object-position: 50% 50%;
+		}
+	}
+	.owl-prev,
+	.owl-next {
+		background-color: $color_fon;
+		outline: 0;
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		top: 50%;
+		margin-top: -25px;
+		border-radius: 50%;
+		opacity: 0.08;
+		transition: opacity 0.3s ease;
+		box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+		span {
+			font-size: 26px;
+			line-height: 50px;
+		}
+	}
+	.owl-prev {
+		left: 5px;
+	}
+	.owl-next {
+		right: 5px;
+	}
+	&:hover {
+		.owl-prev,
+		.owl-next {
+			opacity: 0.3;
+		}
+	}
+	.owl-prev,
+	.owl-next {
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
